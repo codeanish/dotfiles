@@ -24,22 +24,5 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup("plugins")
 
-local builtin = require("telescope.builtin")
-vim.keymap.set('n', '<C-p>', builtin.find_files, {})
-vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
-
-vim.keymap.set('n', '<C-n>', ':Neotree filesystem reveal left<CR>')
-
-vim.api.nvim_create_autocmd('FileType', {
-  pattern = { 'lua' },
-  callback = function()
-    vim.treesitter.start()
-    -- vim.wo.foldexpr = 'v:lua.vim.treesitter.foldexpr()'
-    -- vim.wo.foldmethod = 'expr'
-    vim.bo.indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
-  end,
-})
 
 
-require("catppuccin").setup()
-vim.cmd.colorscheme "catppuccin"
