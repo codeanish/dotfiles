@@ -1,6 +1,6 @@
-return { 
-  "codeanish/nvim-treesitter", 
-  lazy = false, 
+return {
+  "codeanish/nvim-treesitter",
+  lazy = false,
   build = ":TSUpdate",
 
   config = function()
