@@ -13,7 +13,7 @@ return {
     },
     config = function()
       require("mason-lspconfig").setup({
-        ensure_installed = { "lua_ls", "gopls" }
+        ensure_installed = { "lua_ls", "gopls", "ruff" }
       })
     end
   },
@@ -31,6 +31,8 @@ return {
       })
 
       vim.lsp.config("gopls", {})
+
+      vim.lsp.config("ruff", {})
 
 
       vim.api.nvim_create_autocmd("LspAttach", {

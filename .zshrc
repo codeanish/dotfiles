@@ -80,3 +80,6 @@ eval "$(starship init zsh)"
 eval "$(fzf --zsh)"
 eval "$(zoxide init zsh)"
 
+
+# Added by LM Studio CLI tool (lms)
+export PATH="$PATH:/Users/anish/.lmstudio/bin"
